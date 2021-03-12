@@ -1,0 +1,36 @@
+
+
+.login-page {
+  height: 100%;
+  .ant-layout {
+    height: 100%;
+    border: 1px solid red;
+  }
+
+  .ant-layout-header {
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: snow;
+    font-size: 20px;
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+    }
+  }
+
+  .ant-layout-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .ant-layout-footer {
+  }
+}
