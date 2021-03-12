@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { message, Layout, Menu } from "antd";
-import { Route, Switch, Redirect, Link } from "react-router-dom";
+import { Route, Switch, Link } from "react-router-dom";
 import "../style/home.scss";
 import User from "../components/User";
 import Video from "../components/Video";
@@ -33,7 +33,7 @@ const Home = (props) => {
   return (
     <div className="home-page">
       <Layout>
-        <Sider trigger={null} collapsible >
+        <Sider trigger={null} collapsible>
           <div className="logo">
             <svg className="icon" aria-hidden="true">
               <use xlinkHref="#iconbilibili"></use>
@@ -65,9 +65,11 @@ const Home = (props) => {
               minHeight: 280,
             }}
           >
-            <Route exact path="/user" component={User} />
-            <Route exact path="/video" component={Video} />
-            <Route exact path="/tracer" component={Tracer} />
+            <Switch>
+              <Route exact path="/user" component={User} />
+              <Route exact path="/video" component={Video} />
+              <Route exact path="/tracer" component={Tracer} />
+            </Switch>
           </Content>
         </Layout>
       </Layout>

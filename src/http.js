@@ -1,9 +1,9 @@
 import axios from "axios";
-import { message } from "antd";
+// import { message } from "antd";
 
 const http = axios.create({
   baseURL: "http://159.75.122.22:3001/api",
-  timeout: 2000,
+  timeout: 5000,
 });
 
 http.interceptors.request.use(
@@ -19,6 +19,7 @@ http.interceptors.request.use(
   }
 );
 
-const userList = () => http.get("/userlist");
+const usersApi = () => http.get("/userlist");
+const searchUsersApi = (model) => http.post("/users/search", model);
 
-export { userList };
+export { usersApi, searchUsersApi };

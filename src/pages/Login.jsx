@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../style/login.scss";
 import { Button, Layout, Input, Form, message } from "antd";
 import axios from "axios";
